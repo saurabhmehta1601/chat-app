@@ -2,11 +2,10 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <div>
-            <span className="text-2xl">ChatApp</span>
-        </div>
+        <header className="p-4 bg-green-900">
+            <span className="text-3xl text-gray-300 font-black">ChatApp</span>
+        </header>
     )
 }
 
-<span></span>
 export default Header
