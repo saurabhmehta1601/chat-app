@@ -1,9 +1,10 @@
+import ChatInputBox from "./ChatInputBox"
 import React from 'react'
 
 const ChatSection = () => {
     return (
-        <div className="bg-yellow-500 flex-1">
-           Main chatting section.  
+        <div className=" flex-1 bg-gray-300 ">
+            <ChatInputBox />
         </div>
     )
 }
