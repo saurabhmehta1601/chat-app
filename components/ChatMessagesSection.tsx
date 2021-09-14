@@ -39,14 +39,15 @@ const ChatMessagesSection = () => {
         return <p>Loading....</p>
     }
 
-    return (<>
+    return (<div className="p-12">
+        
             { data.allMessages.map((msg: any,idx:number)  => (
                 <ChatMessage 
                     key= {idx} 
                     recieved={msg.author !="saurabh"} 
                     content={msg.content}  />
             ) )}
-    </>)
+    </div>)
 }
 
 export default ChatMessagesSection

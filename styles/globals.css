@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+header {
+    height:10vh ;
+}
+
+main {
+    height:80vh ;
+    overflow:hidden ;
+}
+
+.chat-messages {
+    height:73vh;
+
+    overflow-y: scroll;
+    scrollbar-width: 0;
+    -ms-overflow-style: none;
+}
+.chat-messages::-webkit-scrollbar {
+  display: none;
+}
+.chat-input {
+    height:5vh;
+    margin-top: 1vh;
+}
+
+footer {
+    height:10vh ;
+}

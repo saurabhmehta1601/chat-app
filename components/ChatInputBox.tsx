@@ -1,5 +1,5 @@
 import {gql, useMutation } from '@apollo/client';
-import React, { useRef } from 'react'
+import React  from 'react'
 import {IoMdSend } from "react-icons/io"
 
 const CREATE_MESSAGE = gql`
@@ -14,7 +14,11 @@ const CREATE_MESSAGE = gql`
 const ChatInputBox = () => {
     const [mutate] = useMutation(CREATE_MESSAGE)
 
-   const handleSubmit = (e: any) => {
+    const scrollToBottom = () => {
+        const messages = document.querySelector('.chat-messages')! 
+        messages.scrollTo({left:0, top: messages.scrollHeight})
+    }
+    const handleSubmit = (e: any) => {
         e.preventDefault();
         const msgContent = e.target.message.value
         if(msgContent){
@@ -26,6 +30,7 @@ const ChatInputBox = () => {
     })
 }
     e.target.message.value = ""
+    scrollToBottom()
 } 
 
     return (
