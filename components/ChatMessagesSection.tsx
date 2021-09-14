@@ -22,15 +22,19 @@ const ChatMessage = ({recieved,content} : IChatMessageProps ) =>{
     </div>)
 }
 
-const ChatMessagesSection = () => {
-    const {data,loading} = useQuery(gql`
+const MESSAGES_QUERY  = gql`
            query Query{
                 allMessages {
                     author
                     content
                 }
         }
-        `)
+        ` 
+
+const ChatMessagesSection = () => {
+    const {data,loading} = useQuery(MESSAGES_QUERY,{
+        pollInterval: 5000
+    })
     if(loading){
         return <p>Loading....</p>
     }
