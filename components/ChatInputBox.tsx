@@ -35,7 +35,7 @@ const ChatInputBox = () => {
 
     return (
         <form  onSubmit={handleSubmit} className="flex   bg-gray-50 border-2 border-opacity-80 rounded-sm border-gray-400">
-           <input type="text" name="message" className=" flex-1 p-2 outline-none focus:ring focus:border-blue-300 font-mono font-semibold text-sm" /> 
+           <input type="text" autoComplete="off" name="message" className=" flex-1 p-2 outline-none focus:ring focus:border-blue-300 font-mono font-semibold text-sm" /> 
            <button type="submit" className="bg-blue-500 px-4 grid items-center">
                 <IoMdSend className=" text-2xl text-gray-200"/>
            </button>
